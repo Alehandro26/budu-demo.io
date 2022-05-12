@@ -1,0 +1,101 @@
+.menu {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  &__nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    top: 64px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__list {
+  z-index: 10;
+  background-color: #fff;
+  padding: 0 16px;
+  }
+
+  &__item {
+    list-style: none;
+    margin: 0 0 10px 0;  
+    padding: 24px 0;
+    cursor: pointer;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid #eaecee;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, .6);
+   
+    &_flex{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_wrapper {
+      width: 10px;
+      height: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__line {
+    display: block;
+    position: relative;
+    width: 17px;
+    height: 15px;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  &__line:before,
+  &__line:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+
+  &__line:before {
+    top: 0;
+  }
+
+  &__line:after {
+    bottom: 0;
+  }
+
+  &__line span {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 7px;
+  }
+
+  &__list-bussines {
+    display: none;
+    
+  }
+}
+

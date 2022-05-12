@@ -1,0 +1,65 @@
+.pcard {
+  background: #ffffff;
+  border-radius: 32px;
+  text-align: left;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 304px;
+  min-width: 262px;
+  //max-width: 262px;
+
+  @media (min-width: 1440px) {
+    //max-width: 352px;
+    min-width: 352px;
+    height: 360px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    padding-bottom: 12px;
+    @media (min-width: 1440px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    flex: 1 1 auto;
+    max-width: 282px;
+    @media (max-width: 1440px) {
+      max-width: 192px;
+    }
+    li {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 20px;
+      color: #000000;
+      list-style-image: url(./img/gal.svg);
+      padding-bottom: 12px;
+      @media (min-width: 1440px) {
+        font-size: 15px;
+      }
+    }
+  }
+  span {
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 500;
+  }
+}
+
+.pcard:not(:last-child) {
+  margin-right: 16px;
+  @media (min-width: 1440px) {
+    margin-right: 20px;
+  }
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
