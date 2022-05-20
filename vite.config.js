@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import packageConfig from "./package.json";
 // https://vitejs.dev/config/
-export default defineConfig(({mode}) => ({
+export default defineConfig( ({
 
-  base: mode === "production" ? packageConfig.homepage : "",
+  base: packageConfig.homepage,
   plugins: [react()]
 }))
